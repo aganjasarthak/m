@@ -75,16 +75,41 @@ h5 {
 h6 {
     color: navy;
 }
+        .timeline {
+            border-left: 2px solid #000;
+            padding-left: 20px;
+            margin-left: 20px;
+            position: relative;
+        }
+        .timeline-entry {
+            margin-bottom: 20px;
+            position: relative;
+        }
+        .timeline-entry::before {
+            content: '';
+            position: absolute;
+            left: -8px;
+            top: 0;
+            width: 12px;
+            height: 12px;
+            background-color: #000;
+            border-radius: 50%;
 
     </style>
 </head>
 <body>
     <div class="form-container">
         <h2>Neural Network Calculator-Concrete Strength</h2>
+       <div class="timeline">
+    <div class="timeline-entry">
         <p>Developed by: Sarthak Aaganja (<a href="mailto:sarthak.aaganja12@gmail.com">sarthak.aaganja12@gmail.com</a>)</p>
-        <p>Civil Engineer , Khwopa College of Engineering</p>
-         <p>UI coordination :Er. Vivek Shrestha (<a href="mailto:vivek.shrestha@ntc.net.np">vivek.shrestha@ntc.net.np</a>) </p>
-        <p>Civil Engineer,University Of Nevada,Las Vegas</p>
+        <p>Civil Engineer, Khwopa College of Engineering</p>
+    </div>
+    <div class="timeline-entry">
+        <p>UI coordination: Er. Vivek Shrestha (<a href="mailto:vivek.shrestha@ntc.net.np">vivek.shrestha@ntc.net.np</a>)</p>
+        <p>Civil Engineer, University of Nevada, Las Vegas</p>
+    </div>
+</div>
         <p>Trained-Range(26.06 to 82.06 MPa)</p>
         
 
