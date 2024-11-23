@@ -1,0 +1,17 @@
+params = struct();
+params.W = cell(length(W), 1);
+params.b = cell(length(b), 1);
+
+for i = 1:length(W)
+    
+    params.W{i} = double(W{i});  % .00
+    params.b{i} = double(b{i});
+end
+
+params.W = cellfun(@(x) double(x), params.W, 'UniformOutput', false);
+params.b = cellfun(@(x) double(x), params.b, 'UniformOutput', false);
+
+jsonStr = jsonencode(params);
+fid = fopen('datax.json', 'w');
+fprintf(fid, '%s', jsonStr);
+fclose(fid);
